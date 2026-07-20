@@ -23,6 +23,13 @@
   --red-500: #9E3F4E;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 body {
   background-color: var(--gray-100);
   color: var(--gray-800);
