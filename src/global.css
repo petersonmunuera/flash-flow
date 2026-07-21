@@ -49,6 +49,5 @@ body, input, textarea, button {
 button {
   background: transparent;
   border: 0;
-  line-height: 0;
   cursor: pointer;
 }
