@@ -1,6 +1,6 @@
 import { Header } from './components/Header'
 import { FilterSection } from './components/FilterSection'
-import { GridCards } from './components/CardsGrid'
+import { CardsGrid } from './components/CardsGrid'
 
 import './global.css'
 
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <main>
         <FilterSection />
-        <GridCards />
+        <CardsGrid />
       </main>
     </>
   )

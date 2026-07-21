@@ -1,4 +1,59 @@
-.container {
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(42, 52, 57, 0.06);
+
+  .actions {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    gap: 0.25rem;
+    transition: all 0.2s linear;
+
+    button {
+      padding: 0.5rem;
+      border-radius: 999px;
+      transition: all 0.2s linear;
+    }
+
+    button:hover {
+      background-color: var(--gray-200);
+    }
+  }
+
+  &:hover .actions {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  span {
+    background-color: var(--gray-200);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-500);
+  }
+}
+
+.emptyContainer {
   padding-top: 6rem;
   display: flex;
   flex-direction: column;
