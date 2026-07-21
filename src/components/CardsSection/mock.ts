@@ -3,29 +3,29 @@ import type { FlashcardType } from "../../types/flashcard";
 export const cards: FlashcardType[] = [
   {
     category: "React",
-    question: "pergunta 1",
-    answer: "resposta 1"
-  },
-  {
-    category: "JavaScript",
-    question: "pergunta 2",
-    answer: "resposta 1"
-  },
-  {
-    category: "Node.js",
-    question: "pergunta 3",
-    answer: "resposta 1"
-  },
-  {
-    category: "Tailwind CSS",
-    question: "pergunta 4",
-    answer: "resposta 1"
+    question: "O que é Virtual DOM? e",
+    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
   },
   {
     category: "React",
-    question: "pergunta 5",
-    answer: "resposta 1"
-  }
+    question: "O que é Virtual DOM? d",
+    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
+  },
+  {
+    category: "React",
+    question: "O que é Virtual DOM? c",
+    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
+  },
+  {
+    category: "React",
+    question: "O que é Virtual DOM? b",
+    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
+  },
+  {
+    category: "React",
+    question: "O que é Virtual DOM? a",
+    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
+  },  
 ]
 
 // export const cards: FlashcardType[] = []

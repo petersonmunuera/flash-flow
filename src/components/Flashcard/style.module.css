@@ -5,7 +5,7 @@
   min-height: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1.25rem;
   box-shadow: 0 10px 30px rgba(42, 52, 57, 0.06);
 
   .actions {
@@ -44,5 +44,40 @@
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--gray-500);
+  }
+}
+
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  line-height: 1.25rem;
+
+  p:first-child {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+  }
+
+  p:last-child {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    color: var(--purple-500);
+  }
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: end;
+
+  button {
+    margin-right: -0.75rem;
+    margin-bottom: -0.75rem;
+
+    background-color: var(--gray-300);
+    border-radius: 999px;
+    padding: 1rem;
+    line-height: 0;
   }
 }

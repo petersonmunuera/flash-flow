@@ -22,13 +22,15 @@ export function Flashcard({ card }: FlashcardProps) {
           </button>
         </div>
       </header>
-      <div>
+      <div className={style.cardBody}>
         <p>{card.question}</p>
         <p>{card.answer}</p>
       </div>
-      <button>
-        <img src={revealIcon} alt="revelar" />
-      </button>
+      <footer className={style.cardFooter}>
+        <button>
+          <img src={revealIcon} alt="revelar" />
+        </button>
+      </footer>
     </article>
   )
 }
