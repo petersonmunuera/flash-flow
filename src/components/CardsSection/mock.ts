@@ -7,23 +7,23 @@ export const cards: FlashcardType[] = [
     answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
   },
   {
-    category: "React",
-    question: "O que é Virtual DOM? d",
+    category: "JavaScript",
+    question: "O que é JS d",
+    answer: "Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
+  },
+  {
+    category: "Node.js",
+    question: "O que é Node?",
     answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
   },
   {
-    category: "React",
-    question: "O que é Virtual DOM? c",
+    category: "Tailwind CSS",
+    question: "O que é Tailwind?",
     answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
   },
   {
-    category: "React",
-    question: "O que é Virtual DOM? b",
-    answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
-  },
-  {
-    category: "React",
-    question: "O que é Virtual DOM? a",
+    category: "JavaScript",
+    question: "O que é JS a",
     answer: "Virtual DOM é uma representação em memória do DOM real. Ele permite que bibliotecas como o React comparem mudanças de forma eficiente e atualizem apenas os elementos necessários na interface, melhorando a performance."
   },  
 ]

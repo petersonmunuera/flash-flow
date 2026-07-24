@@ -1,25 +1,27 @@
-import { useState } from 'react'
 import { categories } from '../consts'
 
 import style from './style.module.css'
 
-const filterOptions = ['Tudo', ...categories]
+const filters = ['Tudo', ...categories]
 
-export function FilterBar() {
-  const [selectedFilter, setSelectedFilter] = useState<string>('Tudo')
+type FilterBarProps = {
+  activeFilter: string
+  onSelectFilter: (filter: string) => void
+}
 
+export function FilterBar({ activeFilter, onSelectFilter }: FilterBarProps) {
   return (
     <ul className={style.filters}>
-      {filterOptions.map(filterOption => {
-        const selectedClass = selectedFilter === filterOption ? style.selected : ''
+      {filters.map(filter => {
+        const selectedClass = activeFilter === filter ? style.selected : ''
 
         return (
-          <li 
-            className={selectedClass} 
-            key={filterOption} 
-            onClick={() => setSelectedFilter(filterOption)}
+          <li
+            className={selectedClass}
+            key={filter}
+            onClick={() => onSelectFilter(filter)}
           >
-            {filterOption}
+            {filter}
           </li>
         )
       })}

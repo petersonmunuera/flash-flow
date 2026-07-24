@@ -6,7 +6,13 @@ import emptyImg from '../../assets/empty.svg'
 import style from './style.module.css'
 import { Flashcard } from '../Flashcard'
 
-export function CardsSection() {
+type CardsSectionProps = {
+  activeFilter: string
+}
+
+export function CardsSection({ activeFilter }: CardsSectionProps) {
+  console.log(activeFilter)
+
   const hasSomeCard = Boolean(cards.length)
 
   return hasSomeCard ? (
@@ -18,8 +24,8 @@ export function CardsSection() {
   ) : (
     <section className={style.emptyContainer}>
       <img src={emptyImg} alt="vazio" />
-      <p>Você ainda não possui flashcards. 
-      Que tal criar um para começar?</p>
+      <p>Você ainda não possui flashcards.
+        Que tal criar um para começar?</p>
       <Button>Novo Flashcard</Button>
     </section>
   )
