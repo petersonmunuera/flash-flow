@@ -1,10 +1,12 @@
 import { Button } from '../Button'
 import { Flashcard } from '../Flashcard'
+import { AddNewFlashcard } from '../AddNewFlashcard'
+import { useFilter } from '../../hooks/useFilter'
+
 import { cards } from './mock'
 
 import emptyImg from '../../assets/empty.svg'
 import style from './style.module.css'
-import { useFilter } from '../../hooks/useFilter'
 
 export function CardsSection() {
   const { activeFilter } = useFilter()
@@ -18,6 +20,7 @@ export function CardsSection() {
       {filteredCards.map(card => (
         <Flashcard key={card.question} card={card} />
       ))}
+      <AddNewFlashcard />
     </section>
   ) : (
     <section className={style.emptyContainer}>
