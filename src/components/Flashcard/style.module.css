@@ -2,7 +2,7 @@
   background-color: var(--white);
   border-radius: 16px;
   padding: 2rem;
-  min-height: 320px;
+  min-height: 335px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -64,6 +64,16 @@
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
     color: var(--purple-500);
+  }
+
+  &.hidden {
+    justify-content: center;
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--gray-800);
+    }
   }
 }
 
