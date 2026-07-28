@@ -3,22 +3,23 @@ import { Flashcard } from '../Flashcard'
 import { AddNewFlashcard } from '../AddNewFlashcard'
 import { useFilter } from '../../hooks/useFilter'
 
-import { cards } from './mock'
-
 import emptyImg from '../../assets/empty.svg'
 import style from './style.module.css'
+import { useFlashcards } from '../../hooks/useFlashcards'
 
 export function CardsSection() {
   const { activeFilter } = useFilter()
-  const hasSomeCard = Boolean(cards.length)
+  const { flashcards } = useFlashcards()
+
+  const hasSomeCard = Boolean(flashcards.length)
   const filteredCards = activeFilter === 'Tudo'
-    ? cards
-    : cards.filter(card => card.category === activeFilter)
+    ? flashcards
+    : flashcards.filter(card => card.category === activeFilter)
 
   return hasSomeCard ? (
     <section className={style.gridContainer}>
       {filteredCards.map(card => (
-        <Flashcard key={card.question} card={card} />
+        <Flashcard key={card.id} card={card} />
       ))}
       <AddNewFlashcard />
     </section>

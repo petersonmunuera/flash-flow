@@ -4,6 +4,7 @@ import editIcon from '../../assets/edit.svg'
 import deleteIcon from '../../assets/delete.svg'
 import revealIcon from '../../assets/reveal.svg'
 import style from './style.module.css'
+import { useFlashcards } from '../../hooks/useFlashcards'
 
 type FlashcardProps = {
   card: FlashcardType
@@ -11,6 +12,8 @@ type FlashcardProps = {
 
 export function Flashcard({ card }: FlashcardProps) {
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
+
+  const { removeFlashcard } = useFlashcards()
 
   return (
     <article key={card.question} className={style.card}>
@@ -20,7 +23,7 @@ export function Flashcard({ card }: FlashcardProps) {
           <button>
             <img src={editIcon} alt="editar" />
           </button>
-          <button>
+          <button onClick={() => removeFlashcard(card.id)}>
             <img src={deleteIcon} alt="excluir" />
           </button>
         </div>
