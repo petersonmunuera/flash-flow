@@ -1,13 +1,13 @@
-import { type ReactNode } from 'react'
+import { type ReactNode, type ButtonHTMLAttributes } from 'react'
 import style from './style.module.css'
 
-type ButtonProps = {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
 }
 
-export function Button({ children }: ButtonProps) {
+export function Button({ children, ...props }: ButtonProps) {
   return (
-    <button className={style.container}>
+    <button {...props} className={style.container}>
       {children}
     </button>
   )

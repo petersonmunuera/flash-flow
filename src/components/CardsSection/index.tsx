@@ -1,15 +1,24 @@
 import { Button } from '../Button'
 import { Flashcard } from '../Flashcard'
+import type { FlashcardType } from '../../types/flashcard'
 import { AddNewFlashcard } from '../AddNewFlashcard'
 import { useFilter } from '../../hooks/useFilter'
+import { useFlashcards } from '../../hooks/useFlashcards'
+import { v1 as uuid } from 'uuid'
 
 import emptyImg from '../../assets/empty.svg'
 import style from './style.module.css'
-import { useFlashcards } from '../../hooks/useFlashcards'
 
 export function CardsSection() {
   const { activeFilter } = useFilter()
-  const { flashcards } = useFlashcards()
+  const { flashcards, addFlashcard } = useFlashcards()
+
+  const newFlashcard: FlashcardType = {
+    id: uuid(),
+    question: 'new flashcard',
+    answer: 'answer new flashcard',
+    category: 'React'
+  }
 
   const hasSomeCard = Boolean(flashcards.length)
   const filteredCards = activeFilter === 'Tudo'
@@ -28,7 +37,7 @@ export function CardsSection() {
       <img src={emptyImg} alt="vazio" />
       <p>Você ainda não possui flashcards.
         Que tal criar um para começar?</p>
-      <Button>Novo Flashcard</Button>
+      <Button onClick={() => addFlashcard(newFlashcard)}>Novo Flashcard</Button>
     </section>
   )
 }
