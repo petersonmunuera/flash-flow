@@ -12,7 +12,6 @@ type FlashcardProps = {
 
 export function Flashcard({ card }: FlashcardProps) {
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
-
   const { removeFlashcard } = useFlashcards()
 
   return (

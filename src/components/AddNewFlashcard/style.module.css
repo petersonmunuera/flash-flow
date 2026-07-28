@@ -1,5 +1,6 @@
 .container {
   background-color: var(--gray-200);
+  min-height: 335px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
